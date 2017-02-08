@@ -1,0 +1,20 @@
+#!/bin/bash
+#-*- mode: shell-script -*-
+#-*- coding: utf-8 -*-
+
+# Name: dll
+# Brief: Make dll library.
+# Author: fe.yf <631190613@qq.com>
+
+
+# Webpack Bin.
+DLL="./node_modules/.bin/webpack \
+--config ./scripts/builder/webpack.config.dll.js"
+
+
+# Main.
+echo -e "\n\n Package DLLs... \n"
+$DLL $*
+
+
+exit 0

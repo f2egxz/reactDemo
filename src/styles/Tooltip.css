@@ -1,0 +1,204 @@
+/*-*- mode: css -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * Tooltip.css
+ *
+ * 文本提示框
+ *
+ * @author fe.gxz
+ */
+@value ThemeBgc:  #6e6e6e;
+
+
+/**
+ * Tooltip
+ *  文本提示框的样式
+ *  上左，上中，上右
+ *  右中， 左中
+ *  下左，下中，下右
+ */
+
+
+.tipTL {
+  left: 0;
+  top: 0;
+  transform: translate(0, calc(-100% - 10px));
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+
+&::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   border-top: 6px solid ThemeBgc;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   left: 0;
+   transform: translate(100%,100%);
+   }
+}
+
+.tipTC{
+  left:50%;
+  top:0;
+  transform: translate(-50%,calc(-100% - 10px));
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+&::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   border-top: 6px solid ThemeBgc;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   left: 50%;
+   transform: translate(-50%,100%);
+ }
+}
+
+.tipTR{
+  top:0;
+  right: 0;
+  transform: translate(0,calc(-100% - 10px));
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+&::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   border-top: 6px solid ThemeBgc;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   right: 0;
+   transform: translate(-100%,100%);
+ }
+}
+
+
+.tipRC{
+  top:50%;
+  right: 0;
+  transform: translate(calc(100% + 10px),-50%);
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+&::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   border-right: 6px solid ThemeBgc;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   top: 50%;
+   transform: translate(-100%,-50%);
+ }
+}
+
+
+.tipLC{
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 10px),-50%);
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+&::after {
+   content: '';
+   position: absolute;
+   right: 0;
+   border-left: 6px solid ThemeBgc;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   top: 50%;
+   transform: translate(100%,-50%);
+ }
+}
+
+
+
+.tipBL  {
+  bottom: 0;
+  left: 0;
+  transform: translate(0,calc(100% + 10px));
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+&::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   border-bottom: 6px solid ThemeBgc;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   left: 0;
+   transform: translate(100%,-100%);
+ }
+}
+
+.tipBC{
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,calc(100% + 10px));
+  /*composes: tipBox;*/
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+&::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   border-bottom: 6px solid ThemeBgc;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   left: 50%;
+   transform: translate(-50%,-100%);
+ }
+}
+
+.tipBR{
+  bottom: 0;
+  right: 0;
+  transform: translate(0,calc(100% + 10px));
+  position: absolute;
+  background-color: ThemeBgc;
+  padding: 5px;
+  color:#fff;
+  border-radius: 4px;
+&::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   border-bottom: 6px solid ThemeBgc;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   right: 0;
+   transform: translate(-100%,-100%);
+ }
+}
+
+
+/**
+ * tooltipBox 的样式
+ */
+.tooltipBox {
+  position: relative;
+  cursor: default;
+}

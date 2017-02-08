@@ -1,0 +1,8 @@
+.container {
+  flex: 0 0 180px;
+
+  box-sizing: border-box;
+  padding: 2rem;
+
+  --svgColor: #E1E8ED;
+}

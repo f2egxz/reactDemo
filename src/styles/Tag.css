@@ -1,0 +1,36 @@
+/*-*- mode: css -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * Tag.css
+ *
+ * 标签
+ *
+ * @author fe.gxz
+ */
+
+.tag {
+  display: inline-block;
+  padding:2px 8px;
+  border-radius: 4px;
+  cursor: default;
+  color: #ffffff;
+  background-color: red;
+  margin: 4px;
+}
+.dft {
+  border: 1px solid #000000;
+  color: #333333;
+}
+.colors {
+  padding:3px 9px;
+}
+
+.delete {
+  position: relative;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 12px;
+  top: -2px;
+}
+

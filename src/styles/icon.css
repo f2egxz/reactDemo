@@ -1,0 +1,16 @@
+.iconImg {
+  display: inline-block;
+  size: auto;
+  max-width: 1rem;
+  max-height: 1rem;
+  line-height: 1;
+  vertical-align: text-bottom;
+}
+
+.icon {
+  margin-right: .25rem;
+}
+
+.icon * {
+  fill: var(--svgColor);
+}

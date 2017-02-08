@@ -1,0 +1,16 @@
+exports[`test InputNumber 1`] = `
+<div
+  className="inputNumber  "
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}>
+  <input
+    className="input "
+    onChange={[Function]}
+    type="text"
+    value={2} />
+  
+</div>
+`;

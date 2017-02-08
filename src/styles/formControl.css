@@ -1,0 +1,23 @@
+/*-*- mode: scss -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * formControl.css
+ *
+ * 表单项
+ *
+ * @author fe.yf <631190613@qq.com>
+ */
+
+.container {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}

@@ -1,0 +1,15 @@
+/*-*- mode:css -*-*/
+/*-*- coding: utf-8 -*-*/
+
+.span {
+  -moz-appearance: normal ;
+  color: #014aff;
+
+}
+.box {
+  margin-left: 20px;
+}
+
+.input {
+  margin-right: 8px;
+}

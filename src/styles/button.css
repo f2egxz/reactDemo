@@ -1,0 +1,200 @@
+/*-*- mode: scss -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * button.css
+ *
+ * 按钮
+ *
+ * @author fe.yf <631190613@qq.com>
+ */
+
+/**
+ * 按钮 重置样式
+ */
+
+@value buttonPaddingY: 0.375rem;
+@value buttonPaddingX: 1.5rem;
+
+.button {
+  composes: borderContainer from 'style/util';
+
+  display: inline-block;
+  padding: buttonPaddingY buttonPaddingX;
+
+  cursor: pointer;
+}
+
+
+/**
+ * 按钮风格
+ *
+ * - 主按钮
+ * - 深色主按钮
+ * - 副按钮
+ * - 深色副按钮
+ * - 主边框按钮
+ * - 副边框按钮
+ * - 成功按钮 TODO
+ * - 错误按钮 TODO
+ * - 警告按钮 TODO
+ */
+
+/**
+ * buttonTheme
+ *
+ * 填充按钮样式
+ *
+ * @mixin
+ * @param {color} $textColor
+ * @param {color} $normalColor
+ * @param {color} $hoverColor
+ * @param {color} $activeColor
+ * @param {color} $disabledColor
+ */
+@define-mixin buttonTheme
+$textColor,
+$normalColor,
+$hoverColor,
+$activeColor,
+$disabledColor {
+
+  color: $textColor $normalColor;
+  border-color: $normalColor;
+
+  &:hover {
+    color: $textColor $hoverColor;
+    border-color: $hoverColor;
+  }
+  &:active {
+    color: $textColor $activeColor;
+    border-color: $activeColor;
+  }
+  &[disabled] {
+    color: $textColor $disabledColor;
+    border-color: $disabledColor;
+  }
+}
+
+/**
+ * buttonTheme
+ *
+ * 边框按钮样式
+ *
+ * @mixin
+ * @param {color} $textColor
+ * @param {color} $normalColor
+ * @param {color} $hoverColor
+ * @param {color} $activeColor
+ * @param {color} $disabledColor
+ */
+@define-mixin borderButtonTheme
+$textColor,
+$normalColor,
+$hoverColor,
+$activeColor,
+$disabledColor {
+
+  color: $textColor transparent;
+  border-color: $normalColor;
+
+  &:hover {
+    color: $textColor transparent;
+    border-color: $hoverColor;
+  }
+  &:active {
+    color: $textColor transparent;
+    border-color: $activeColor;
+  }
+  &[disabled] {
+    color: $textColor transparent;
+    border-color: $disabledColor;
+  }
+}
+
+
+@value primaryButton:                 #88C9F6;
+@value primaryButtonHover:            #ABD9F9;
+@value primaryButtonPressed:          #7DABCB;
+@value primaryButtonDisabled:         #DBEFFC;
+
+@value primaryDarkButton:             #5A90BC;
+@value primaryDarkButtonHover:        #8BB1D0;
+@value primaryDarkButtonPressed:      #5D83A2;
+@value primaryDarkButtonDisabled:     #CDDDEB;
+
+@value primaryBorderButton:           #9CBDD7;
+@value primaryBorderButtonHover:      #92B5D3;
+@value primaryBorderButtonPressed:    #7696B1;
+@value primaryBorderButtonDisabled:   #E5EEF5;
+@value primaryBorderButtonText:       #90B5D2;
+
+@value secondaryButton:               #786A68;
+@value secondaryButtonHover:          #A09695;
+@value secondaryButtonPressed:        #726867;
+@value secondaryButtonDisabled:       #D6D2D1;
+
+@value secondaryDarkButton:           #604731;
+@value secondaryDarkButtonHover:      #8F7E6E;
+@value secondaryDarkButtonPressed:    #615040;
+@value secondaryDarkButtonDisabled:   #CFC7C0;
+
+@value secondaryBorderButton:         #C0C1C2;
+@value secondaryBorderButtonHover:    #E9EAEA;
+@value secondaryBorderButtonPressed:  #7E7E7E;
+@value secondaryBorderButtonDisabled: #EEEFEF;
+@value secondaryBorderButtonText:     #7E7E7E;
+
+.buttonPrimary {
+  @mixin buttonTheme
+  #fff,
+  primaryButton,
+  primaryButtonHover,
+  primaryButtonPressed,
+  primaryButtonDisabled
+}
+
+.buttonPrimaryDark {
+  @mixin buttonTheme
+  #fff,
+  primaryDarkButton,
+  primaryDarkButtonHover,
+  primaryDarkButtonPressed,
+  primaryDarkButtonDisabled
+}
+
+.buttonSecondary {
+  @mixin buttonTheme
+  #fff,
+  secondaryButton,
+  secondaryButtonHover,
+  secondaryButtonPressed,
+  secondaryButtonDisabled
+}
+
+.buttonSecondaryDark {
+  @mixin buttonTheme
+  #fff,
+  secondaryDarkButton,
+  secondaryDarkButtonHover,
+  secondaryDarkButtonPressed,
+  secondaryDarkButtonDisabled
+}
+
+.buttonPrimaryBorder {
+  @mixin borderButtonTheme
+  primaryBorderButtonText,
+  primaryBorderButton,
+  primaryBorderButtonHover,
+  primaryBorderButtonPressed,
+  primaryBorderButtonDisabled
+}
+
+.buttonSecondaryBorder {
+  @mixin borderButtonTheme
+  secondaryBorderButtonText,
+  secondaryBorderButton,
+  secondaryBorderButtonHover,
+  secondaryBorderButtonPressed,
+  secondaryBorderButtonDisabled
+}

@@ -1,0 +1,16 @@
+exports[`test Tag test 1`] = `
+<span
+  className="tag colors"
+  style={
+    Object {
+      "backgroundColor": "#108ee9",
+    }
+  }>
+  test
+  <i
+    className="delete"
+    onClick={undefined}>
+    x
+  </i>
+</span>
+`;

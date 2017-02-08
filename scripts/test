@@ -1,0 +1,23 @@
+#!/bin/bash
+#-*- mode: shell-script -*-
+#-*- coding: utf-8 -*-
+
+# Name: test
+# Brief: Code test
+# Author: fe.yf <631190613@qq.com>
+
+
+# Config NODE envirments.
+export NODE_ENV=test
+
+
+# Jest CLI bin path.
+JEST="./node_modules/.bin/jest"
+
+
+# Main.
+echo -e "\n\n Yihuan Start Testing... \n"
+$JEST $*
+
+
+exit 0

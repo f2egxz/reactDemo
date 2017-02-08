@@ -1,0 +1,147 @@
+/*-*- mode: css -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * Switch.css
+ *
+ * 开关
+ *
+ * @author fe.gxz
+ */
+
+/**
+ * Switch size
+ */
+@value itemSmall   1rem;
+@value itemDefault 1.5rem;
+@value itemBig     2rem;
+
+
+
+/**
+ * Switch theme color
+ */
+
+@value bgc           #c0c0c0;
+@value bgcActive     #88C9F6;
+
+
+/**
+ * SwitchBoxTheme
+ * @mixin
+ * @param {size}  $itemSize
+ * @param {color} $bgc
+ */
+
+@define-mixin switchBoxTheme
+$BoxSize,
+$bgc {
+
+  position: relative;
+  height: $BoxSize;
+  width: calc($BoxSize*2);
+  border-radius: calc($BoxSize/2);
+  background-color: $bgc;
+  border: 2px solid $bgc;
+
+&:focus {
+   box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
+   outline: 0;
+ }
+}
+
+
+/**
+ * SwtichItemTheme
+ * @mixin
+ * @param {size} itemSize
+ */
+@define-mixin switchItemTheme
+$itemSize {
+
+  position: absolute;
+  left:0;
+  top:0;
+  size:$itemSize;
+  border-radius: calc($itemSize/2);
+  background-color: #fff;
+  transition: all 0.4s;
+
+&:active {
+   transform: scaleX(1.2);
+ }
+}
+
+/**
+ * SwtichItemActiveTheme
+ * @mixin
+ * @param {size} $itemSize
+ */
+@define-mixin switchItemActiveTheme
+$itemSize {
+  left: calc(100% - $itemSize);
+}
+
+
+
+.BSwitchBox {
+  @mixin switchBoxTheme
+  itemBig,
+  bgc
+}
+.SwitchBox {
+  @mixin switchBoxTheme
+  itemDefault,
+  bgc
+}
+.SSwitchBox {
+  @mixin switchBoxTheme
+  itemSmall,
+  bgc
+}
+
+.switchBoxActive {
+  background-color: bgcActive;
+  border: 2px solid bgcActive;
+}
+
+.BSwitchItem {
+  @mixin switchItemTheme
+  itemBig
+}
+.BSwitchItemActive {
+  @mixin switchItemActiveTheme
+  itemBig
+}
+
+
+.SwitchItem {
+  @mixin switchItemTheme
+  itemDefault
+}
+
+.SwitchItemActive {
+  @mixin switchItemActiveTheme
+  itemDefault
+}
+
+
+.SSwitchItem {
+  @mixin switchItemTheme
+  itemSmall
+}
+
+.SSwitchItemActive {
+  @mixin switchItemActiveTheme
+  itemSmall
+}
+
+.disabledBox {
+  cursor: not-allowed;
+  background: #f4f4f4;
+  border-color: #f4f4f4;
+}
+.disabledItem {
+  background: #ccc;
+  cursor: not-allowed;
+}

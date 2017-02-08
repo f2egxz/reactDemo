@@ -1,0 +1,103 @@
+/*-*- mode: scss -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * global.css
+ *
+ * 全局样式重置
+ *
+ * @author fe.yf <631190613@qq.com>
+ */
+
+
+/**
+ * 基础变量设定
+ *
+ * - 字体排版
+ * - 颜色主题
+ */
+@value fontFamily: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+@value baseFontSize:       16px;
+@value baseLineHeight:     1.58;
+@value baseColor:          #363636;
+@value baseBackgroudColor: #F1F5F8;
+@value uiFontSize:         14px;
+@value uiLineHeight:       1.5;
+
+
+/**
+ * 重置全局容器
+ */
+html,
+body,
+:global(#app) {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+/**
+ * 重置全局字体
+ */
+html {
+  font-weight: normal;
+  font-style:  normal;
+  font-family: fontFamily;
+  font-size:   baseFontSize;
+}
+
+
+/**
+ * 重置基础布局
+ */
+body {
+  font-size:   100%;
+  line-height: baseLineHeight;
+  color: baseColor baseBackgroudColor;
+}
+
+
+/**
+ * 重置UI组件
+ *
+ * 1. UI组件盒子类型重置为border-box，用于计算padding
+ * 2. 清除焦点虚框
+ * 3. 设置禁用时手势
+ */
+button,
+input,
+select,
+textarea {
+  box-sizing:  border-box;      /* 1 */
+  font-family: fontFamily;
+  font-weight: normal;
+  font-style:  normal;
+  font-size:   uiFontSize;
+  line-height: uiLineHeight;
+
+  &:focus {
+    outline: 0;                 /* 2 */
+  }
+
+  &[disabled] {
+    cursor: not-allowed;        /* 3 */
+  }
+}
+
+
+/**
+ * 重置链接标签样式
+ */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/**
+ * 全局环境变量
+ */
+:root {
+  --primaryColor:   #88C9F6;
+  --secondaryColor: #999EAE;
+}

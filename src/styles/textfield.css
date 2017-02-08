@@ -1,0 +1,45 @@
+/*-*- mode: scss -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * textfield.css
+ *
+ * 输入框
+ *
+ * @author fe.yf <631190613@qq.com>
+ */
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0.5rem;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.area {
+  min-height: 8rem;
+}
+
+
+@value input:         #EAEAEA;
+@value inputHover:    #A6D7F9;
+@value inputDisabled: #E6E6E6;
+
+.inputPrimary {
+  & {
+    border-color: input;
+  }
+
+  &:hover {
+    border-color: inputHover;
+  }
+
+  &[disabled] {
+    border-color: inputDisabled;
+  }
+}

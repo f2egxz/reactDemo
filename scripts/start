@@ -1,0 +1,25 @@
+#!/bin/bash
+#-*- mode: shell-script -*-
+#-*- coding: utf-8 -*-
+
+# Name: start
+# Brief: Start dev server
+# Author: fe.yf <631190613@qq.com>
+
+
+# Config NODE envirments.
+export NODE_ENV=development
+
+
+# Webpack DevServer runner.
+WDS="./node_modules/.bin/webpack-dev-server \
+--progress \
+--config ./scripts/builder/webpack.config.dev.js"
+
+
+# Main.
+echo -e "\n\n Yihuan Server Start... \n"
+$WDS $*
+
+
+exit 0

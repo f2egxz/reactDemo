@@ -1,0 +1,49 @@
+exports[`test Pagination 1`] = `
+<ul
+  className="defaultUl">
+  <li
+    className="defaultLi "
+    onClick={[Function]}>
+     <
+  </li>
+  <li
+    className="defaultLi"
+    onClick={[Function]}>
+    1
+  </li>
+  <li
+    className="defaultLi more moreLt"
+    onClick={[Function]} />
+  <li
+    className="defaultLi"
+    onClick={[Function]}>
+     
+    4
+  </li>
+  <li
+    className="defaultLi current"
+    onClick={[Function]}>
+     
+    5
+  </li>
+  <li
+    className="defaultLi"
+    onClick={[Function]}>
+     
+    6
+  </li>
+  <li
+    className="defaultLi more moreRt"
+    onClick={[Function]} />
+  <li
+    className="defaultLi"
+    onClick={[Function]}>
+    33
+  </li>
+  <li
+    className="defaultLi "
+    onClick={[Function]}>
+     >
+  </li>
+</ul>
+`;

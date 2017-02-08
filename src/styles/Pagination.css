@@ -1,0 +1,94 @@
+/*-*- mode: css -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * Pagination.css
+ *
+ * 分页组件
+ *
+ * @author fe.gxz
+ */
+
+@value themeColor:          #108ee9;
+
+.defaultUl:before,  .defaultUl:after {
+  content: "";
+  display: table;
+}
+.defaultUl:after {
+  clear: both;
+}
+.defaultUl {
+  list-style: none;
+  margin:0;
+  padding: 0;
+  zoom: 1;/*IE678*/
+}
+
+.defaultLi {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+  list-style: none;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  float: left;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  margin-right: 5px;
+  -moz-user-select:none;
+  user-select:none;
+  &:hover {
+     border: 1px solid themeColor;
+     color: themeColor;
+   }
+}
+
+.more {
+  border: none;
+  font-size: 12px;
+  &:hover {
+     border: none;
+   }
+}
+
+.more::after {
+  content: '▪▪▪';
+}
+
+.moreLt:hover::after {
+  content: '<<';
+  font-size: 16px;
+}
+
+.moreRt:hover::after {
+  content: '>>';
+  font-size: 16px;
+}
+
+.current {
+  background-color: themeColor;
+  border: 1px solid themeColor;
+  color: #fff;
+  &:hover {
+    color:#fff
+   }
+}
+
+.lose {
+  border: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  background-color: #fff;
+  cursor: not-allowed;
+  &:hover {
+     cursor: not-allowed;
+     border: 1px solid #d9d9d9;
+     color: #d9d9d9;
+   }
+}
+
+

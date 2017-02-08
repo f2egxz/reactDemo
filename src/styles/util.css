@@ -1,0 +1,64 @@
+.container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.bodyContainer {
+  min-width: 1000px;
+}
+
+.borderBox {
+  box-sizing: border-box;
+}
+
+.marginContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flexBox {
+  display: flex;
+}
+
+.justifyContentCenter {
+  justify-content: center;
+}
+
+.flexBaseContainer {
+  composes: flexBox;
+}
+
+.flexContainer {
+  composes: flexBox;
+  composes: justifyContentCenter;
+}
+
+.flexCenterContainer {
+  composes: flexBox;
+  composes: justifyContentCenter;
+  align-items: center;
+}
+
+.flexVerticalContainer {
+  composes: flexBox;
+  composes: justifyContentCenter;
+  flex-flow: column;
+}
+
+.flexFillContainer {
+  composes: flexBox;
+  composes: justifyContentCenter;
+  flex: 1;
+}
+
+.flexVerticalFillContainer {
+  composes: flexBox;
+  composes: justifyContentCenter;
+  flex-flow: column;
+  flex: 1;
+}
+
+.borderContainer {
+  border: 1px solid transparent;
+  border-radius: 4px;
+}

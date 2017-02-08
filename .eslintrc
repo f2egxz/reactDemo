@@ -1,0 +1,55 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "strict": 0,
+    "quotes": ["warn", "single", {
+      "avoidEscape": true,
+      "allowTemplateLiterals": true
+    }],
+    "semi": ["warn", "never"],
+    "semi-spacing": ["warn", {
+      "before": false,
+      "after": true
+    }],
+    "no-extra-semi": ["warn"],
+    "object-curly-spacing": ["warn", "always"],
+    "sort-imports": ["off"],
+    "newline-after-var": ["warn"],
+    "prefer-const": ["warn"],
+    "one-var": ["warn", "never"],
+    "padded-blocks": ["warn", "never"],
+    "keyword-spacing": ["warn", {
+      "before": true,
+      "after": true,
+      "overrides": {
+        "if": {
+          "before": true,
+          "after": false
+        }
+      }
+    }],
+    "no-extra-parens": ["off", "all"],
+    "no-console": ["warn"],
+    "react/jsx-filename-extension": ["warn"],
+    "react/jsx-indent": ["warn", 2],
+    "react/jsx-no-literals": ["off"]
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "eslint:all",
+    "plugin:react/all"
+  ]
+}

@@ -1,0 +1,8 @@
+exports[`test click chanage the Switch 1`] = `
+<div
+  className="SwitchBox switchBoxActive "
+  onClick={[Function]}>
+  <span
+    className="SwitchItem SwitchItemActive " />
+</div>
+`;

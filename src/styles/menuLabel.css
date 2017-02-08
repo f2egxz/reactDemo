@@ -1,0 +1,10 @@
+.container {
+  padding-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+
+  font-size: 0.8rem;
+  color: #66757F;
+
+  cursor: default;
+}

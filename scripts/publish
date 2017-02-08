@@ -1,0 +1,9 @@
+#!/bin/bash
+#-*- mode: shell-script -*-
+#-*- coding: utf-8 -*-
+
+# Name: publish
+# Brief: Publish app
+# Author: fe.yf <631190613@qq.com>
+
+# Build app

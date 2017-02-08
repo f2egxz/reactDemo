@@ -1,0 +1,32 @@
+exports[`test Link changes the class when hovered 1`] = `
+<div
+  className="tooltipBox"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}>
+  this is test content
+  
+</div>
+`;
+
+exports[`test Link changes the class when hovered 2`] = `
+<div
+  className="tooltipBox"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}>
+  this is test content
+  <span
+    className="tipTC">
+    test
+  </span>
+</div>
+`;
+
+exports[`test Link changes the class when hovered 3`] = `
+<div
+  className="tooltipBox"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}>
+  this is test content
+  
+</div>
+`;

@@ -1,0 +1,31 @@
+exports[`test Badge 1`] = `
+<div
+  className="box">
+  <a
+    href="##"
+    style={
+      Object {
+        "backgroundColor": "#00b400",
+        "display": "block",
+        "height": "60px",
+        "width": "60px",
+      }
+    }>
+    test
+  </a>
+  <span
+    className="badgeBase badgeNum">
+    10+
+  </span>
+</div>
+`;
+
+exports[`test Badge 2`] = `
+<div
+  className="box">
+  <span
+    className="badgeBase badgeBaseDot processing">
+    
+  </span>
+</div>
+`;

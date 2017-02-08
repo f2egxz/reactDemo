@@ -1,0 +1,15 @@
+#!/bin/bash
+#-*- mode: shell-script -*-
+#-*- coding: utf-8 -*-
+
+# Name: prerelease
+# Brief: Pre release app
+# Author: fe.yf <631190613@qq.com>
+
+# Build app
+yarn build
+
+# Run local file server
+cd build
+python -m SimpleHTTPServer 7777
+#php -S localhost:7777

@@ -1,0 +1,74 @@
+/*-*- mode: css -*-*/
+/*-*- coding: utf-8 -*-*/
+
+/**
+ * Badge.css
+ *
+ * 徽标数
+ *
+ * @author fe.gxz
+ */
+
+.box {
+  position: relative;
+  min-width: 30px;
+  min-height: 30px;
+  background-color: #ddd;
+  border-radius: 4px;
+  display: inline-block;
+}
+.badgeBase{
+  position: absolute;
+  top:0;
+  right: 0;
+  transform: translate(50%,-50%);
+}
+
+.badgeNum {
+  border-radius: 10px;
+  background: #F04134;
+  border: 1px solid transparent;
+  color: #fff;
+  line-height: 18px;
+  text-align: center;
+  padding: 0 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.badgeBaseDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #F04134;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.success {
+  background: #00A854;
+}
+
+.processing {
+  background: #108ee9;
+  animation: StatusProcessing 1.2s infinite ease-in-out;
+}
+
+.default {
+  background: #d9d9d9;
+}
+
+.warning {
+  background: #ffbf00;
+}
+
+@keyframes StatusProcessing {
+  0% ,100%{
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
